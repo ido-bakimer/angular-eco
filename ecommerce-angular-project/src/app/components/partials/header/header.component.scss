@@ -1,0 +1,38 @@
+header{
+    position: relative;
+    background-color: white;
+    padding: 0;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    ul , .menu-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // gap: 10px;
+        list-style: none;
+        a{
+            color: cadetblue;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-block;
+            padding: 1rem;
+            &:hover{
+                background-color: cadetblue;
+                color: indianred;
+            }
+        }
+    }
+}
+
+a.logo{
+    font-weight: bold;
+    padding: 1rem;
+}
