@@ -1,38 +1,83 @@
-header{
-    position: relative;
-    background-color: white;
-    padding: 0;
-    border-bottom: 1px solid #d3d3d3;
+header {
+  position: relative;
+  background-color: #2C755A;
+  padding: 0;
+  border-bottom: 1px solid #d3d3d3;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
 
-
-.container{
+  ul,
+  .menu-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    ul , .menu-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        // gap: 10px;
-        list-style: none;
-        a{
-            color: cadetblue;
-            transition: 0.3s;
-            cursor: pointer;
-            display: inline-block;
-            padding: 1rem;
-            &:hover{
-                background-color: cadetblue;
-                color: indianred;
-            }
-        }
+    position: relative;
+    // gap: 10px;
+    list-style: none;
+    a {
+      transition: 0.3s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      height: fit-content;
+      padding: 1rem;
+      &:hover {
+        background-color: whitesmoke;
+        // color: rgb(64, 64, 228);
+        color: #222;
+      }
+      span {
+        background-color: green;
+        color: white;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 12px;
+        height: 12px;
+        font-size: 8px;
+      }
     }
+  }
 }
 
-a.logo{
-    font-weight: bold;
-    padding: 1rem;
+a.logo {
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.menu {
+  width: 100px;
+  position: absolute;
+  z-index: 1;
+  background-color: whitesmoke;
+  display: none;
+}
+.menu-container {
+  width: 100px;
+  a {
+    width: 100%;
+  }
+  .menu {
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+  }
+  &:hover {
+    background-color: whitesmoke;
+    color: #222;
+    .menu {
+      display: flex;
+      top: 100%;
+      width: 200%;
+    }
+  }
 }
