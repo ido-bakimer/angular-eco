@@ -1,26 +1,134 @@
-.favorite {
-  &.n {
-    filter: grayscale(100%) brightness(2.2);
-  }
-}
-
-.stars-cont {
+.home-component {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
-  position: relative;
-  width: 100px;
   flex-wrap: wrap;
-  .star {
-    width: 20px;
-    height: 20px;
-  }
-  .bw-screen {
-    display: block;
-    position: absolute;
-    height: 100%;
-    background-color: rgba(95, 158, 160, 0);
-    backdrop-filter: grayscale(100%);
-    right: 0;
+  background-color: #f3ebe4;
+  .food-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px #ccc;
+    font-size: 12px;
+    .img-cont {
+      height: 100%;
+      width: 50%;
+      min-width: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      img {
+        width: 120%;
+        height: 120%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      padding: 10px;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 5px;
+      .cookTime {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+      .name {
+        margin-top: 2px;
+        font-weight: bold;
+        max-width: 200px;
+        font-size: 16px;
+      }
+      .favorite {
+        height: 12px;
+        width: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+        &.n {
+          filter: grayscale(100%) brightness(2.2);
+        }
+      }
+
+      .stars-cont {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        position: relative;
+        width: fit-content;
+        flex-wrap: wrap;
+        .star {
+          width: 12px;
+          height: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 12px;
+            height: 12px;
+          }
+        }
+        .bw-screen {
+          display: block;
+          position: absolute;
+          height: 100%;
+          background-color: rgba(95, 158, 160, 0);
+          backdrop-filter: grayscale(100%);
+          right: 0;
+        }
+      }
+
+      .tags-origins {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 8px;
+        gap: 5px;
+        .tag,
+        .origin {
+          border-radius: 5px;
+          background-color: #f3ebe4;
+          padding: 3px;
+          border: 1px solid #f3ebe4;
+        }
+        .origin {
+          background-color: #e6f3e4;
+          border: 1px solid #e6f3e4;
+        }
+      }
+
+      .cookTime {
+        margin-top: auto;
+        margin-left: auto;
+        font-size: 10px;
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
   }
 }
